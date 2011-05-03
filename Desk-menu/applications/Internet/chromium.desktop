@@ -1,0 +1,4 @@
+[Desktop Entry]
+NAME=Navigateur Web Chromium
+Exec=?:\Apps\Chrome\Chrome.exe  --user-data-dir="?:\Profiles\Application Data\Chromium"
+Icon=?:\Apps\Chrome\Chrome.exe

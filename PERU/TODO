@@ -1,0 +1,4 @@
+ajouter au menu contextuel le support pour $P, $E, $F etc pour hamorniser les configuration avec les HKs.
+ajouter $F dans les associations de fichiers pour permettre des commandes du type ?:\chemin\logiciel.exe cmd0 cmd1= $F cmd2
+ajouter une gestion des alternatives à l'aide des fichiers .desktop
+internatiopnalisation du menu

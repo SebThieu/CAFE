@@ -1,0 +1,162 @@
+[tray]
+pref=Préférences
+maj=Mise à jour
+exec=Exécuter
+pause=Pause
+quit=Quitter
+
+relaneccafe=Relancer P.E.R.U.
+cafecorb=Corbeille de P.E.R.U.
+
+fs_pause_item=Associations de fichiers en pause
+menu_pause_item=Menu contextuel en pause
+hk_pause_item=Raccourcis clavier en pause
+pauses=Pauses
+
+[corb]
+ouvrecorb=Ouvrir la Corbeille
+vidcorb=Vider la Corbeille
+launchtrash=Lancer T.R.A.S.H.
+
+[context]
+ouvrir=Ouvrir
+ouvriralt=Ouvrir (alternatif)
+ouvriravec=Ouvrir avec
+metdscorb=Mettre à la corbeille
+apartirmodel=A partir d'un modèle...
+
+[traytip]
+cafeoperationel=P.E.R.U. est opérationel
+utilisationpossible=Vous pouvez maintenant l'utiliser
+enpause=Mise en pause de P.E.R.U.
+actif=Activation de P.E.R.U.
+
+fs_pause_msg_1=Les associations de fichier sont en pause
+fs_pause_msg_0=Les associations de fichier sont actives
+menu_pause_msg_1=Le menu contextuel est en pause
+menu_pause_msg_0=Le menu contextuel est actif
+hk_pause_msg_1=Les raccourcis clavier sont en pause
+hk_pause_msg_0=Les raccourcis clavier sont actifs
+
+
+;pour trash
+trash_enpause=Mise en pause de T.R.A.S.H.
+trash_actif=Activation de T.R.A.S.H.
+
+[pref]
+langage=Choix du Langage
+dblclickset=Réglage du Double-clic gauche
+configassoc=Configurer les associations
+configapplis=Configurer les applications liées
+confighotkeys=Configurer les raccourcis clavier
+autoassoc=Associer automatiquement les nouvelles extensions
+confedit=Editer les fichiers de configuration
+ttconfedit=Tous les fichiers
+configwinds=Configurer les fenêtres additionnelles
+
+[messages]
+erreurverifversion=Impossible de vérifier la version disponible actuellement sur internet.`nMise à jour interrompue.
+erreurprogmaj=Impossible de lancer le programme de mise à jour.`nVeuillez réessayer plus tard
+erreurrecupprogmaj=Impossible de télécharger le programme de mise à jour.`nMise à jour interrompue
+majinutile=Vous disposez déjà de la dernière version disponible de P.E.R.U.
+logicielintrouvable=Le logiciel designé pour ouvrir ce type de fichier est introuvable.`nSouhaitez vous choisir un nouveau logiciel pour ouvrir ce type de fichiers ?
+logicielintrouvable2=Le logiciel "$cmd".`nCorrespondant au raccourci clavier "$hk" est introuvable.
+logicielintrouvable3=Le logiciel est introuvable.Vérifiez le fichier de configuration.
+iniProgInexistant=Le programme $prog`ndesigné pour ouvrir les fichiers ini `ndans $inifile est introuvable.`nUtilisez Win+clic pour redéfinir l'association des fichiers ini
+fichiernonrepertorie=Les fichiers "$extension" ne sont pas repertoriés par Café.`nSouhaitez vous que Café determine comment les ouvrir ?`n(il est déconseillé de répondre oui pour les fichiers exe et com)
+assocboxtitle=Choisissez le programe qui ouvrira les fichiers $extension
+
+cafeerreur=P.E.R.U.|ERREUR
+cafeinfo=P.E.R.U.|INFO
+
+confirmdscorb=T.R.A.S.H.|Confirmation de mise dans la Corbeille
+
+unfichcorb=Voulez vous vraiment mettre '$OutFileName$' à la Corbeille?`noui = dans la Corbeille de P.E.R.U.`nnon = dans le Corbeille de Windows
+plusfichcorb=Voulez vous vraiment mettre ces fichiers à la Corbeille?`noui = dans la Corbeille de P.E.R.U.`nnon = dans le Corbeille de Windows
+
+unfichcorb2=$OutFileName$ est plus grand que la corbeille.`nSouhaitez vous le supprimer?
+plusfichcorb2=Les fichiers à mettre à la corbeille dépassent sa taille maximale.`nSouhaitez vous les supprimer?
+
+confirmvidcorb=T.R.A.S.H.|Confirmation de vidange de la Corbeille
+vidcorbquest=Voulez vous vraiment vider la corbeille?
+badDeskPath=Le chemin vers le Bureau n'est plus le bon!`nVeuillez indiquer le bon chemin vers le dossier "Bureau".
+promtbadDeskPath=Le chemin vers le dossier "Bureau" est généralement de la forme : "C:\Documents and Settings\[nom de l'utilisateur courant]\Bureau"
+nocontextfile=Le fichier "$contextfile" est absent!
+
+corbpleine=T.R.A.S.H.
+vidpleinecorbquest=La corbeille est pleine.`nVoulez vous la vider avant d'y mettre d'autre fichiers?
+
+
+[dblclickgui]
+labelrapide=Rapide
+labellent=Lent
+boutontest=Double-cliquez`nsur ce bouton`npour tester`nla sensibilité`nà la vitesse choisie
+oneclicktooltip=simple-clic :`n- temps écoulé depuis le précédent : $deltaClickms`n- temps autorisé entre 2 clics : $vitessems
+dblclicktooltip=double-clic !
+labelvalider=Valider
+labelannuler=Annuler
+titredblclick=Réglage du Double-clic
+
+[extgui]
+extguisplashtext=Création de la liste ! Veuillez patienter.
+boxajout=Ajouter une association
+textajout=Vous pouvez soit aller chercher un fichier ayant l'extension que vous souhaitez associer. Soit directement entrer le nom de l'extension sans oublier de commencer par un point.
+boutonassocier=Associer
+boutonparcourir=...
+boxapplications=Applications associées
+boxprincipale=Application principale
+boxsecondaire=Application secondaire
+textassociation=Pour utiliser l'application par défaut de l'ordinateur écrivez host dans le champ.
+boxextensions=Liste des extensions
+supprextension=Supprimer l'extension
+supprassoc=Supprimer l'association
+boutonok=Ok
+boutonquitter=Quitter
+titregui=P.E.R.U. |Configurer les associations
+titregui=P.E.R.U. | Configurer les applications liées
+titreselectionfichier=Sélectionner un fichier à associer
+toustypes=Tous les fichiers
+extensionexistante=L'extension existe déja !
+erreurextension=Erreur pour l'ajout de l'extension
+titreselectionapplication=Sélectionner une application pour l'association
+typeapplication=Application
+
+[appgui]
+appguisplashtext=Création de la liste ! Veuillez patienter.
+boxapplications=Applications liées.
+labelcheminabs=Chemin vers l'application
+btnparcourirapp=...
+btnokapp=OK
+btnquitapp=Quitter
+titregui=P.E.R.U. |Configuration des applications liées
+titreselectionapplication=Sélectionner une application pour l'association
+typeapplication=Application
+splashchgmnt=Un moment s'il vous plait! Le temps de modifier le chemin.
+splashfin=Terminé !
+boxappassext=Extensions
+
+[hkgui]
+hktitlegui=P.E.R.U. | Configuration des raccourcis claviers
+hkdblonline=Double cliquez sur la ligne pour la changer
+hkadd=+ Ajouter
+hkdelete=- Enlever
+hkmodify=Modifier
+hkclean=Effacer
+hkhotkey=Raccourci :
+hkaction=Action :
+hkapply=Appliquer
+hkerror=Le raccourcis clavier "$hk" est déjà utilisé pour l'action : "$var" !
+hkacthk=Action|Raccourci
+
+[wingui]
+wintitlegui=CAFE | Configuration des fenêtres additionelles
+boxwins=Liste de fenêtre
+addwind=Ajouter une fenêtre
+delmanagedwin=Supprimer la fenêtre
+
+helpout=Pour que CAFE fonctionne sur une nouvelle fenêtre, pressez Shift + Win et cliquez sur la bare de titre de la fenêtre.`n`nVous devez cliquer sur OK pour appliquer le changement.`n`nPour ajouter une fenêtre à l'aide de son titre, inscrivez le entièrement ou partiellement ci dessous.
+
+helpout2=Pour supprimer une fenêtre sélectionnez la dans la liste et cliquez sur le bouton ci dessous. Les fenêtres audessus du séparateur ne sont pas supprimables.
+
+noclass=Aucune fenêtre sélectionnée!
+alreadymanaged=La fenêtre est déjà dans la liste!

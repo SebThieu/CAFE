@@ -1,0 +1,174 @@
+		C.A.F.E. : Associations Fichiers <-> Executables
+
+Tant qu'il est actif, C.A.F.E. vous permet d'ouvrir vos documents avec les logiciels nomades présents sur votre clef usb, sans toucher à la base de registre. Utiliser des applications via un votre propre menu contextuel. Définir vos propres raccourcis clavier.
+
+Ajouter ou modifier une association se fait d'un simple "Win+Clic Gauche" sur un fichier. Le logiciel vous demandera alors avec quel programme vous souhaitez ouvrir les fichiers de ce type.
+De plus, vous pouvez définir des associations alternatives en utilisant la combinaison "Alt+Win+Clic Gauche" sur un fichier à ouvrir. Ces associations seront utilisées lorsque vous ferez un double-clic sur un fichier en maintenant la touche Alt enfoncée.
+Les associations définies sont enregistrées sous forme de chemin relatif dans un fichier ini, dans le dossier du logiciel. C.A.F.E. est donc parfaitement nomade et discret.
+
+Vous pouvez créer votre propre menu contextuel qui sera accéssible pas un double-clic-droit ou en utilisant la combinaison Win-clic-droit. Sur un fichier, un dossier ou un esppace vide de l'EXPLORER ou du Bureau.
+Le menu contextuel est enregistré dans des fichiers ini dans le dossier du logiciel. C.A.F.E. vous permez d'avoir un fichier pour chaque logiciel que vous souhaitez entrer dans le menu contextuel.
+
+Définir vous propres raccourcis clavier vous permettra d'accéder rapidement à vos applications préfferées. Ces raccourcis claviers peuvent être actifs sur toutes les fenêtres ou sur une ou plusieurs fenêtres.
+
+Un clic-droit sur l'icône de Café dans la barre des tâches vous permettra d'ouvrir son menu. Celui-ci permet d'accéder à la documentation du logiciel (ce fichier), à sa licence, ainsi qu'aux réglages des préferences.
+
+C.A.F.E. est distribué sous licence GNU GPL
+
+	I - Les différents fichiers de configuration :
+	------------------------------------------
+Tous les chemins peuvent être relatifs ou absolut, pour plus d'information voire le paragraphe "Explication sur les chemins".
+
+		i - Le fichier principal ; cafe.ini :
+		-------------------------------------
+
+[configuration]
+auto=				<= 1 pour associer automatiquement les nouvelles extensions, 0 si non
+doubleclic=			<= la vitesse du double clic (gauche et droit).
+langue=lng\fr.lng		<= chemin vers le fichier de langue
+updateurl=			<= si vous souhaitez utiliser un autre dépôt que : http://clef.usb.googlepages.com, le dépôt officiel. Indiquez ici son URL.
+fenetresAdditionnelles= 	<= ajoutez ici les noms des fenêtres séparées d'une virgule, sur lesquelles vous souhaitez que les associations de fichiers de C.A.F.E. soit actif. Vous pouvez utiliser le nom des fenêtres ou bien la class de la fenêtre précedé de "ahk_class ". Par exemple pour la fenêtre du filemanager de 7-zip, la classe de celui ci est FM: ahk_class FM.
+appspath=			<= chemin relatif vers le dossier des applications.
+
+[TRAY]
+file-1=				<= cette section contient la liste des fichiers de configuration pour le menu de C.A.F.E. Vous pouvez ajouter des entrées dans ce menu juste au dessus de "Relancer C.A.F.E.	(Win+W)".
+
+[CONTEXT]
+file-1=				<= cette section contient la liste des fichiers de configuration pour le menu contextuel s'affichant sur des fichiers ou des dossiers
+
+[CONTEXT2]
+file-1=				<= cette section contient la liste des fichiers de configuration pour le menu contextuel s'affichant ailleurs que sur des fichiers ou des dossiers
+
+[GROUP]				<= cette section contient la liste de vos groupes de fenêtres. Vous les utiliserez pour les raccourcis clavier. La clé est le nom du groupe, la valeur la liste des fenêtres appartenant à ce groupe. Ces listes sont comme celle de la clé "fenetresAdditionnelles" de la section "configuration", voir plus haut. Exemple : MyGroup=ahk_class ExploreWClass,ahk_class Progman,ahk_class CabinetWClass
+
+[HOTKEY]			<= cette section contient les raccourcis claviers. La clé est la valeur du raccourcis clavier, la valeur de la clé l'action à effectuer à l'appel du raccourcis. L'action peut être précedée d'un nom de fenêtre, ce sa classe ou d'un nom de groupe de fenêtres séparé par un ~. Par exemple: 
+
+[associations]			<= cette section contient les associations principales
+
+[alternative]			<= cette section contient les associations alternatives
+
+
+		ii - Les fichiers pour le menu :
+		--------------------------------
+			1 - Description du fichier :
+			----------------------------
+
+[GENERAL]
+url=				<= chemin vers le dossier des l'application
+extension=			<= la liste des extensions à associer avec l'application
+noInSubMenu= 		<= true si vous ne souhaitez pas créer un sousmenu pour l'application
+
+[MENU]
+type-1=			<= menu, submenu ou separator
+name-1=			<= son nom, sauf pour submenu
+cmd-1=			<= la commande correspondant à l'entrée du menu sauf pour submenu et separator
+filetype-1=			<= la liste des extensions à associer avec l'entrée
+
+			2 - Utilisation du fichier :
+			----------------------------
+Pour les listes mettre les extensions sans le point, séparer par un "|" ; ahk|zip|... Utilisez "folder" pour ajouter les dossiers, file pour un fichier quelconque. L'ordre n'a pas d'importance.
+
+Pour écrire la commande il ne faut pas utiliser oublier de mettre les " et vous pouvez utiliser les variables suivant:
+- $F pour indiquer le où les fichiers, dossiers selectionnés.
+- $P pour le dossier dans lequel il(s) se trouve(nt)
+- $E pour indiquer le nom du fichier ou du dossier sans son adresse ni son extension pour les fichiers. Dans le cas d'une multi selection celui du premier de la liste.
+- $V en début de command pour indiquer que vous ne souhaitez pas lancer l'application en mode caché. Ne pas mettre de guillemet ( " ) avant.
+
+exemple:
+si le chemin est celui ci: C:\Documents and Settings\utilisateur\Bureau\mon_fichier.txt
+$F = C:\Documents and Settings\utilisateur\Bureau\mon_fichier.txt
+$P = C:\Documents and Settings\utilisateur\Bureau
+$E = mon_fichier
+
+pour un dossier: C:\Documents and Settings\utilisateur\Bureau\mon_dossier
+$F = C:\Documents and Settings\utilisateur\Bureau\mon_dossier
+$P = C:\Documents and Settings\utilisateur\Bureau
+$E = mon_dossier
+
+Pour des exemples d'utilisation ce reporter aux fichiers fournis : 7-zip.ini, clamwin.ini...
+
+
+
+	I - Association de fichier :
+	----------------------------
+
+	II - Le menu contextuel :
+	-------------------------
+	
+	III - Les raccourcis clavier :
+	----------------------------
+		i - Les raccourcis clavier propre à C.A.F.E. :
+		----------------------------------------------
+			1 - Action sur les fichiers ou dossiers :
+			-----------------------------------------
+
+- double clic gauche ( DCG ) ou Entrée => ouverture du fichier avec l'application par défaut
+
+- Alt + DCG  ou Alt + Entrée => ouverture du fichier avec l'application secondaire
+
+- Win + DCG => pour associer le type de fichier avec son application par défaut
+
+- Alt + Win + DCG => pour associer le type de fichier avec son application secondaire
+
+- double clic droit ( DCD ) ou Win + DCD => ouverture du menu contextuel de C.A.F.E. Aussi valable ailleurs que sur un fichier ou dossier.
+
+La sélection de plusieurs fichiers ou dossier est possible.
+
+			2 - Les autres raccourcis clavier :
+			-----------------------------------
+
+- Win + w => relance de C.A.F.E.
+
+- Ctrl + Win => mise en pause de C.A.F.E.
+
+- Win + s => lancement de S.U.C.R.E. si il est présent
+
+- Win + m => configuration du double clic gauche
+
+- Win + x => affichage de la fenêtre de configuration des extensions
+
+- Win + a => affichage de la fenêtre de configuration des applications liées
+
+- Esc + c => fermeture de C.A.F.E., Esc = Echape ou Escape
+
+		ii - Créer ces propres raccourcis clavier :
+		-------------------------------------------
+
+
+	IV - Les commandes :
+	--------------------
+
+- /exit => pour fermer C.A.F.E.
+
+- /appsconf => affiche la fenêtre de configuration des applications liées
+
+- /extsconf => affiche la fenêtre de configuration des extensions
+
+- /mouseconf => affiche la fenêtre de configuration du double clic gauche
+
+- /update => lance la mise à jour
+
+- /pause => pour démarer en pause
+
+
+	VI - Explication sur les chemins :
+	-------------------------------
+Les chemins relatifs peuvent avoir les formes suivantes :
+
+	 ce\chemin
+	 \ce\chemin
+	 .\ce\chemin
+	 ..\ce\chemin
+
+ou bien en utilisant le label du périférique, entouré par des * :
+	*Le label de ma clé*\ce\chemin
+
+ou en utilisant le numéro de série du périférique, entouré par des * :
+	*145641324*\ce\chemin
+
+ou les chemins commençant par une variable d'environnement :
+	%userprofile%\Mes documents
+
+Les chemins de cette forme ne sont acceptés :
+	F:\ce\..\..\chemin
+

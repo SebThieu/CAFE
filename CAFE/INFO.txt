@@ -1,0 +1,13 @@
+0.1.5.3 : le menu est créé à l'avance avec un variable de type char qui remplace le tableau qui été utilisé par enigmaticq
+
+0.1.5.4 : le menu est créé à la volet avec la variable de type de char. le problème est qu'au lancement cette variable contient les valeurs pour les exécutions des items du menu tray. mais à chaque fois que l'on fait apparaitre le menu contextuel cette variable change de valeur et ainsi pert les valeurs pour ces exécutions. il faut donc soit créer une nouvelle fonction et sa variable qui ne servira que pour le menu tray.
+de plus le temps d'affichage du menu est trop lent à mon gout.
+
+0.1.5.5 : Soit je créer le menu à la volet à partir du contenue de la variable Cafe_Menu. Le problème est qu'il faudra relancer CAFE pour changer le menu, l'avantage est que le menu s'affichera plus vite, on ne lit le fichiers ini qu'une fois au lacement de CAFE.
+
+L'avantage des deux dernière version ( 0.1.5.4 et 0.1.5.5 avec non relecture des ini) est que l'on n'affiche que les items utiles au lieux de griser les items inutiles.
+
+La branche 0.1.5.5 a été abandonné, trop compliqué.
+La branche 0.1.5.4 aussi, je garde l'ancien fonctionnement
+
+0.1.6.0: continue la 0.1.5.3

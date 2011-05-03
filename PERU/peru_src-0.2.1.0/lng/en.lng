@@ -1,0 +1,161 @@
+[tray]
+pref=Preferences
+maj=Update
+exec=Run
+pause=Pause
+quit=Quit
+
+relaneccafe=Reload P.E.R.U.
+cafecorb=P.E.R.U.'s trash
+
+fs_pause_item=File Association in pause
+menu_pause_item=Context menu in pause
+hk_pause_item=Hotkeys in pause
+pauses=Pauses
+
+[corb]
+ouvrecorb=Open trash
+vidcorb=Empty the trash
+launchtrash=Launch T.R.A.S.H.
+
+[context]
+ouvrir=Open
+ouvriralt=Open (alternative)
+ouvriravec=Open with
+metdscorb=Push in the Trash
+apartirmodel=With a template...
+
+[traytip]
+cafeoperationel=P.E.R.U. is operational
+utilisationpossible=You can use it now
+enpause=P.E.R.U. is in pause
+actif=P.E.R.U. is active
+
+fs_pause_msg_1=File associations in pause
+fs_pause_msg_0=File associations working
+menu_pause_msg_1=Context menu in pause
+menu_pause_msg_0=Context menu working
+hk_pause_msg_1=Hotkeys in pause
+hk_pause_msg_0=Hotkeys working
+
+;pour trash
+trash_enpause=T.R.A.S.H. is in pause
+trash_actif=T.R.A.S.H. is active
+
+[pref]
+langage=Language Choice
+dblclickset=Double-click Settings
+configassoc=Associations Configuration
+configapplis=Software Path Configuration
+confighotkeys=HotKeys configuration
+autoassoc=Automatically associate new extensions
+confedit=Edit configuration files
+ttconfedit=All files
+configwinds=Additional windows settings
+
+[messages]
+erreurverifversion=Error while checking the actually disponible version on the net.`nUpdate Interruptad.
+erreurprogmaj=Error while launching the update program.`nPlease, tri again later
+Erreurrecupprogmaj=Error while downloading the update program.`nUpdated interrupted.
+majinutile=P.E.R.U. is already up to date.
+logicielintrouvable=The software that should open this file type is untraceable.`nDo you want to choose another software to open these files ?
+logicielintrouvable2=The software "$cmd".`nThat should be launch by this hotkey "$hk" is untraceable.
+logicielintrouvable3=Can't fond the software. Please check the configuration file.
+iniProgInexistant=This software : $prog`nthat should open ini files`naccording to : $inifile is untraceable.`nUse Win+clic to redefine ini file association
+fichiernonrepertorie="$extension" files are not yet recognised by Café.`nDo you want to set an association for them ?`n(not recommanded for exe and com files)
+assocboxtitle=Choose the software that will open $extension files
+
+cafeerreur=P.E.R.U.|ERROR
+cafeinfo=P.E.R.U.|INFO
+confirmdscorb=P.E.R.U.|Confirmation to put in the trash
+
+unfichcorb2=$OutFileName$ is highter than the maximum trash folder size.`nDo you want to delete it?
+plusfichcorb2=All this files are highter than the maximum trash folder size.`nDo you want to delete them?
+
+unfichcorb=Do you realy want to put '$OutFileName$' in the Trash?`nyes = in the trash of P.E.R.U.`nno = in the trash of Windows
+plusfichcorb=Do you realy want to put this files in the Trash?
+
+confirmvidcorb=P.E.R.U.|Confirmation for empty the trash
+vidcorbquest=Do you realy want to empty the trash?
+badDeskPath=The Desktop's path is wrong!`nPlease show it the "Desktop" folder's right path.
+promtbadDeskPath=The "Desktop" folder's path is generaly like this : "C:\Documents and Settings\[curent user's name]\Desktop"
+nocontextfile="$contextfile" file si not here!
+
+corbpleine=T.R.A.S.H.
+vidpleinecorbquest=The trash is full.`nDo you want to empty it before to put in it new files?
+
+
+[dblclickgui]
+labelrapide=Fast
+labellent=Slow
+boutontest=This button`nallows you`nto test sensitivity`nat the chosen speed`nby double-clicking it
+oneclicktooltip=single-click :`n- elapsed time : $deltaClickms`n- allowed time : $vitessems
+dblclicktooltip=double-click !
+labelvalider=Validate
+labelannuler=Cancel
+titredblclick=Double-click Settings
+
+[extgui]
+extguisplashtext=Extension list creation! Please wait.
+boxajout=Add an association
+textajout=You can either use the ... button to get a file with the chosen extension, or you can directly type the chosen extension, beginning with the dot.
+boutonassocier=Associate
+boutonparcourir=...
+boxapplications=Associated Software
+boxprincipale=Main Software
+boxsecondaire=Alternative Software
+textassociation=To use host computer software, type host in the field.
+boxextensions=Extensions list
+supprextension=Delete extension
+supprassoc=Delete association
+boutonok=Ok
+boutonquitter=Quit
+titregui=P.E.R.U. |Associations Configuration
+titregui=P.E.R.U. | Applications Configuration
+titreselectionfichier=Select a file to associate
+toustypes=All Files
+extensionexistante=The extension is already managed !
+erreurextension=Error while adding the extension
+titreselectionapplication=Select a software for this association
+typeapplication=Application
+
+[appgui]
+appguisplashtext=Software List Creation ! Please Wait.
+boxapplications=Managed software.
+labelcheminabs=Software's path
+btnparcourirapp=...
+btnokapp=OK
+btnquitapp=Quit
+titregui=P.E.R.U. |Software Path Configuration
+titreselectionapplication=Select a software for this association
+typeapplication=Application
+splashchgmnt=Please until the end of path modification.
+splashfin=Finished !
+boxappassext=Extensions
+
+[hkgui]
+hktitlegui=P.E.R.U. | Hotkeys configuration
+hkdblonline=Double click on a line for select it
+hkadd=+ Add
+hkdelete=- Erase
+hkmodify=Modify
+hkclean=Reset
+hkhotkey=Hotkey :
+hkaction=Action :
+hkapply=Apply
+hkerror=The hotkey "$hk" is already use for : "$var" !
+hkacthk=Action|Hotkey
+
+
+[wingui]
+wintitlegui=CAFE | Monitored Window Configuration
+boxwins=Managed Windows
+addwind=Add a window
+
+helpout=To add another window for CAFE to manage, hold Shift + Win and click the window's title bar.`n`nYou must click OK for changes to apply.`n`nTo add a window by its title write it or a part of it here down.
+
+helpout=To add another window for CAFE to manage, hold Shift + Win and click the window's title bar.`n`nYou must click OK for changes to apply.
+
+delmanagedwin=Delete Managed Window
+noclass=No window selected!
+alreadymanaged=Window Already Managed!

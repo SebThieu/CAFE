@@ -1,0 +1,66 @@
+0.1.4.0: fixation du bug sur le dossier de travail utiliser pas CAFE lorsqu'il ouvre un fichier
+
+0.1.4.1: changement des raccourcis claviers pour:
+		config souris
+		config fileasso
+		config associated apps
+		pause
+		relance
+		quit
+par défaut, ils ne sont plus écrit en dure dans la code mais configurables. 
+	modification de la configuration des raccourcis claviers
+il y a un problème car ceirtain raccourcis ne sont plus utilisables; tel Ctrl+Win	
+	disparition de la gestion en dure de sucre dans le menu. il sera ajouter à l'aide d'un fichier de configuration
+	
+
+0.1.4.2: système de pause sélective
+	ajout du sous menu et de la partie pour mettre en pause sélective
+	
+0.1.4.3: ajout des raccourcis clavier pour les trois items pour les pauses sélectives
+
+0.1.4.4: correction probable d'un probable bug lié à la pause sélective sur les associations de fichiers, la pause ne renvoie pas le clic.
+modification du menu des pauses sélectives. il est maintenant dans le menu tray.
+
+0.1.4.5: Changement du fichier configuration des menus de:
+
+name-1=Ouvrir avec le FileManager
+type-1=menu
+cmd-1=$V "$URL\7zFM.exe" "$F"
+filetype-1=folder|file
+
+en: 
+
+name-1=Ouvrir avec le FileManager
+type-1=menu
+app-1="chemin_relatif\7zFM.exe" ou app-1="$URL\7zFM.exe"
+cmd-1="$F"
+hidden-1=true/false ou 1/0
+filetype-1=folder|file
+
+dans [GENERAL] la clé url est gardée mais il est aussi possible de mettre des chemins relatif dans app-n
+
+avant on écrivait $P$E maintenant c'est $P\$E ce quie st plus compréhensible
+si la valeur de la clé cmd-n commence par un " il faut doubler le premier et le dernier, c'est dû à AutoHotkey et pas à CAFE
+
+j'ai enlevé la clé hide-n pour accélérer le code il faut maintenant mettre *hide* à la fin de la commande
+
+ où on cré le chemin absolut si besoin est, à partir d'un chemin relatif, de la
+; forme:
+;   \ce\chemin
+;   .\ce\chemin
+;   ..\ce\chemin
+...
+on ne peut plus utiliser des chemins relatifs en ce\chemin
+
+
+0.1.4.6: concernant le clique droit, il faut faire un double clique ou appuyé sur la touche windows,
+mais c'est parfois fastidieux. (voir galère, double clic qui prend mal ou le menu windows qui s'affiche )
+serait 'il possible d'inverser, c'est à dire d'un seul clic on n'a le menu de la framakey, et le double clique ou touche windows ce serait
+pour utilisé celui d'origine windows.
+
+possibilité d'inverser double clic droit et clic droit, ajout du clic milieu pour afficher le menu contetuel de cafe. Win+RButton ouvre toujours menu contextuel de CAFE.
+
+j'ai tout viré car l'ouverture du menu avec le clic milieu marche et qu'aujourd'hui il est très rare de ne pas trouver une souris PC sans molette.
+
+0.1.5.2: amélioration de code pour le menu, CAFE est plus rapide le fichier de configuration est plus simple.
+

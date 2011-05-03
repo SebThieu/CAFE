@@ -1,0 +1,18 @@
+Compiler: 		AutoHotKey (http://www.autohotkey.com).
+Compiler copyright: 	©2003-2007 Chris Mallett, portions ©AutoIt Team
+Compiler version:	1.0.48.3
+-------------------------------------------------------
+Version du fichier : 	0.1.6.9
+Version du produit : 	1.0.48.3
+Auteur:         	©2006-2009 
+		Lahire Biette <tuxmouraille@gmail.com>
+			développeur, mainteneur actuel
+		Yann Perrin <yann.perrin+clef@gmail.com>
+			auteur et initiateur du projet
+		enigmatick
+			auteur du code du menu contextuel
+
+Langue:       	Français
+Plateforme:     	WinXP
+Website:		http://nomadsofts.tufamily.org/CAFE , http://clef.usb.googlepages.com
+License: 		GNU GPL

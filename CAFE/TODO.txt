@@ -1,0 +1,83 @@
+1) fait 1) Corriger le problème du dossier d'exécusion des fichiers lancés par CAFE; ils sont lancés dans le dossier de CAFE
+
+2) fait en partie. a finir quand la GUI sera enlevé 2) enlever les raccourcis claviers en dure dans le code
+
+3) fait 3) finir le système de pause sélective
+	ajout du sous menu et de la partie pour mettre en pause sélective
+
+4) ajouter les raccourcis clavier aux pauses sélectives
+
+5) mettre les trois items de pause dans le traymenu
+
+6) Changer les fichiers de configuration des menus de:
+
+name-1=Ouvrir avec le FileManager
+type-1=menu
+cmd-1=$V "$URL\7zFM.exe" "$F"
+filetype-1=folder|file
+
+en: 
+
+name-1=Ouvrir avec le FileManager
+type-1=menu
+app-1="chemin_relatif\URL\7zFM.exe"
+cmd-1="$F"
+hidden-1=true/false ou 1/
+filetype-1=folder|file
+
+dans [GENERAL] la clé url est gardée mais il est aussi possible de mettre des chemins relatif dans app-n
+
+7) concernant le clique droit, il faut faire un double clique ou appuyé sur la touche windows,
+mais c'est parfois fastidieux. (voir galère, double clic qui prend mal ou le menu windows qui s'affiche )
+serait 'il possible d'inverser, c'est à dire d'un seul clic on n'a le menu de la framakey, et le double clique ou touche windows ce serait
+pour utilisé celui d'origine windows.
+
+8) pour la clé filetype; si elle est vide l'entrée est toujours utilisable, file pour tous les fichiers, folder pour les dossiers, ou bien les extensions de fichiers pour des types de fichiers particuliers.
+changer file par .* , folder par \ ou / et tous les fichiers par *
+
+9) tester le création du menu à la volet => trop lent trop compliqué
+9 bis) peut être pour un fork créer le menu à la volé, et n'afficher que les entrées nécessaires au lieu de griser. => pareille
+
+10) dans les fichiers de conf du menu peut être rajouter la clé hide-n= plus tôt que *hide*, sera plus simple pour l'utilisateur, et ça ne ralentira pas trop CAFE maintenant qu'il est plus rapide.
+=> j'ai mis les deux
+
+
+11) Je voulais aussi savoir s'il serait possible de rajouter (dans le tray et/ou depuis un raccourcis) une fonction"afficher les raccourcis de café" (une fenêtre toute simple qui listerait les raccourcis par défaut de café et même encore mieux, capable de lire l'ini et d'afficher aussi ceux personnalisés par l'utilisateur)...
+=> fait
+
+12) [quote="oulala6"]Sinon, encore une petite suggestion : Je sais pas pour vous, mais mon dossier café est devenu un vrai bordel...
+Ne serait-il pas possible de prévoir un dossier "config" pour les ini et les programmes (garder 2 ini et 2 exe de la 0.1.6.0, j'sais pas pour trash, mais que le reste, creatfolder, HotkeyVolume,7-zip.ini etc... soit dans un dossier config). Je sais pas si ça poserait problème qu'il ne soit plus à la même auteur que café.exe ou même si ça t'obligerait à modifier beaucoup du code, mais café n'aura de cesse de se remplir avec les idées de chacun pour le menu contextuel et je pense qu'on perdra en clarté...[/quote]Je n'en étais pas sûr. Maintenant oui. C'est déjà fesable. Il suffit de créer un dossier config pour mettre le fichier ini, et au lieu d'écrire [code][CONTEXT]
+file-1=ouvrir[/code][code][CONTEXT]
+file-1=config\ouvrir[/code]
+
+=> fait
+
+13) revoir les fenêtres appsconf, winconf, 
+
+
+##################################################################
+
+
+
+
+
+11) changer dans cafe.ini langue=lng\fr.lng en langue=fr pour simplifier l'utilisation du fichier. Peut être.
+
+12) ajouter la mise à jour automatique pour simplifier les mise à jour de l'utilisateur
+
+
+13) ajouter l'icon pour indiquer un pause partielle
+
+GoSub, CheckPause
+
+CheckPause:
+If ( _pause_menu = "1" or _pause_hk = "1" or _pause_fs = "1" )
+	Menu, Tray, Icon, FileName, IconNumber, 1
+
+
+
+14) ouvrir le readme.html avec un navigateur web, ou enlever l'ouverture des fichiers.
+corriger le README.html
+ajouter un remerciement à tous les testeurs.
+ajout dans readme.html du chapitre sur les groupes 1) fenetresAdditionnelles= et 2) [GROUP]
+
